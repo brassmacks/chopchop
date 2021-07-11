@@ -1,0 +1,15 @@
+{
+  "name": "chpchp",
+  "version": "1.0.0",
+  "description": "kitchen simulating minigame",
+  "main": "index.js",
+  "browserslist":
+      "defaults",
+  "scripts": {
+        "watch": "webpack --watch --mode=development",
+        "build": "webpack --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Elliott",
+  "license": "ISC"
+}

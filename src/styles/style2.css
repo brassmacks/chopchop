@@ -1,0 +1,29 @@
+
+
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  border: 0;
+  overflow: hidden;
+  display: block;
+}
+div.canvas {
+  display: flex;
+  margin:auto;
+  margin-top: auto;
+  padding: 10%;
+  background-color: aqua;
+  width: fit-content;
+  height: fit-content;
+  block-size: fit-content;
+  align-self: center;
+  border-radius: 13px;
+  align-content:space-around;
+  margin-bottom: 20%;
+}
+#mycanvas{
+  box-sizing: border-box;
+  width: 800;
+  background-color: green;
+}
