@@ -1,38 +1,75 @@
 // require 
+const clickMap = docuent.querySelector("div.canvas");
+const canEl = document.querySelector("canvas#mycanvas");
+const ctx = canEl.getContext('2d');
+const canHi = canEl.height;
+const canWi = canEl.width;
 
 
 
 
-// key down and hold = 
-// Tracking mouse 
 
-// let knife = function(point) {
-//   let px, py = point;
+
+let knife = function() {
+  
+  const wid = 15;
+  let pntx = canWi * 0.8;
+  let pnty = canHi * 0.2;
+  
+  let hanx = canWi * 0.8;
+  let hany = canHi * 0.6;
+  
+    const relativeTurn = function([x1, y1], length, angle) {
+      angle *= Math.PI / 180;
+    
+      let x2 = x1 + length * Math.cos(angle);
+      let y2 = y1 + length * Math.sin(angle);
+      return [x2, y2];
+      // consider refactoring to return angle cos, sin for return path
+    };
+  
+  this.point = [pntx,pnty];
+  this.handle = [hanx, hany];
+  this.blade = [this.point, this.handle];
+  this.hilt = {
+    inBot: relativeTurn(this.handle, wid, 90),
+    inTop: relativeTurn(inBot, this.spine.length * 0.3, 90),
+    outTop: relativeTurn(inTop, wid, 90),
+    outBot: relativeTurn(outTop, this.spine.length * 0.3, 90)
+  };
+  // r will change, it is currently for rendering purposes only
+  // it represents half the width of the knife objec
+  };
+
+
+// rendering fodder 
 //   r = 37.5 
 //   let pi = Math.PI;
 //   ctx = can.getContext('2d');
 //   ctx.canvas.height = 500;
 //   ctx.canvas.width = 1100;
 //   ctx.fillStyle = "rgba(5,5,5,1)"
-//   let x = [300,37.5]
-//   
-//   ctx.fillRect(x[0],y[0],x[1],y[1]);
-//   console.log(pi);
-// }
 
 
-// click and hold 
+// click and hold
+
 // can.addEventListener('mousedown', function(e){
-//   console.log(e);
+//   console.log(e.x, e.y);
 // }); 
 
+// click release 
+// can.addEventListener('mouseup', function(e){
+//   console.log(e.x, e.y);
+// }); 
+
+// cursor on screenn 
 can.addEventListener('mouseenter', function (e) {
   let kx = e.x;
   let ky = e.y;
   console.log("here");
   // repeat ^ on click
   console.log(kx, ky);
-  // knife([e.x,e.y]);
+  // knife();
   // ctx.fillRect()
 });
 
