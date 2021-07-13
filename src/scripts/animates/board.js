@@ -56,7 +56,7 @@ export function renderFace(c) {
   c.lineTo(900,433);
   c.lineTo(900, 300);
   c.stroke();
-  c.fill()
+  c.fill();
   // c.clearRect(160,160, 167.5, 105);
   //			x  y width height
   // c.beginPath();

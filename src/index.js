@@ -27,6 +27,5 @@ document.addEventListener
   }
 );
 
-// function popUp() {
-//   setTimeout(alert("maybe?"), 3000);
-// }
+
+
