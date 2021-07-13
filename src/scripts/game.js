@@ -7,9 +7,9 @@ export const Game = function (ctx) {
 // export const Board = function () {
 
 // };
-// Game.prototype.print = function() {
+Game.prototype.print = function() {
 
-// };
+};
 
 
 
