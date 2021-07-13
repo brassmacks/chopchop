@@ -15,7 +15,7 @@
   \**********************/
 /***/ (function() {
 
-eval("alert(\"we did it boss\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jaHBjaHAvLi9zcmMvaW5kZXguanM/YjYzNSJdLCJuYW1lcyI6WyJhbGVydCJdLCJtYXBwaW5ncyI6IkFBQUFBLEtBQUssQ0FBQyxnQkFBRCxDQUFMIiwic291cmNlc0NvbnRlbnQiOlsiYWxlcnQoXCJ3ZSBkaWQgaXQgYm9zc1wiKTsiXSwiZmlsZSI6Ii4vc3JjL2luZGV4LmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("// import {Game} from './scripts/game.js';\n// let n = \"testeritto\";\n// const ctx = document.querySelector(\"canvas#mycanvas\");  \n// document.addEventListener\n// (\n//   \"DOMContentLoaded\", () => {\n//   let hey = new Game();\n//   console.log(hey);\n//   }\n// );\n// function popUp() {\n//   setTimeout(alert(\"maybe?\"), 3000);\n// }//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jaHBjaHAvLi9zcmMvaW5kZXguanM/YjYzNSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi8vIGltcG9ydCB7R2FtZX0gZnJvbSAnLi9zY3JpcHRzL2dhbWUuanMnO1xuLy8gbGV0IG4gPSBcInRlc3Rlcml0dG9cIjtcbi8vIGNvbnN0IGN0eCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJjYW52YXMjbXljYW52YXNcIik7ICBcbi8vIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXJcbi8vIChcbi8vICAgXCJET01Db250ZW50TG9hZGVkXCIsICgpID0+IHtcbi8vICAgbGV0IGhleSA9IG5ldyBHYW1lKCk7XG4vLyAgIGNvbnNvbGUubG9nKGhleSk7XG4vLyAgIH1cbi8vICk7XG5cbi8vIGZ1bmN0aW9uIHBvcFVwKCkge1xuLy8gICBzZXRUaW1lb3V0KGFsZXJ0KFwibWF5YmU/XCIpLCAzMDAwKTtcbi8vIH1cbiJdLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 
