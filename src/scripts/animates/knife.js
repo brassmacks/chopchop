@@ -1,10 +1,5 @@
 import {p5} from 'p5';
 
-
-// compartmentalize into own file 
-
-
-// compartmentalize into own file 
 export class hold {
     constructor(xpos, ypos, m, g) {
 
@@ -41,7 +36,7 @@ export class hold {
 
         this.display = function (nx, ny) {
             noStroke();
-            // rect(this.x,this.y, nx*2, ny * 2);
+            rect(this.x,this.y, 60,250);
             stroke('rgb(10,255,40)');
             line(this.x, this.y, nx, ny);
         };

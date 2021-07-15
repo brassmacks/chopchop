@@ -27,6 +27,11 @@ const config = {
           },
           'sass-loader', // compiles sass to css
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|obj)$/i,
+        type: 'asset/resource'
+        
       }
     ],
   },

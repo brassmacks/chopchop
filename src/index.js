@@ -1,16 +1,48 @@
-import {Game} from "./scripts/game";
+// import {Game} from "./scripts/game";
 import * as p5 from 'p5';
 let chopper;
 import {hold} from './scripts/animates/knife';
+import audioOn from '../chopics/audioOn.png';
+let img;
+let gripped = false;
+
+// window.preload= function() {
+//   img = window.loadImage('./chopics/buttons/Button.png');
+  
+// };
+
+// const buttons = () => {
 
 
-function preload() {
-  chopper = window.laodModel(kanife);
-}
+// }
+
+let ske;
+
+
+window.setup = function () {
+  
+  const w = window.innerWidth * 0.9;
+  const h = window.innerWidth * 0.8;
+
+
+  if (!ske) {
+    ske = window.createCanvas(w* 0.8, h*0.65);
+    spine = new hold(w * 2, h * 2, weight, gravity);
+    ske.parent('#p5-container');
+    
+  } else 
+      {
+    ske.width = w * 0.8;
+    ske.height = h * 0.65;
+  }
+
+
+
+};
+
 
 let spine;
 
-// if exporting multi objects from same file // importing
 let weight = 2;
 let gravity = 110;
 
@@ -19,10 +51,17 @@ const chopPoint = {
   y: null
 };
 
+
+
+// window.addEventListener('resize', () => {
+//   setup();
+// });
+
 window.addEventListener('mousedown', (e)=> {
   let clix = e.x;
   let cly = e.y;
   gravity -= 100;
+  console.log(clix,cly);
 });
 
 window.addEventListener('mouseup', (e)=>{
@@ -31,34 +70,22 @@ window.addEventListener('mouseup', (e)=>{
   gravity += 100;
 });
 
-const w = window.innerWidth * 0.9;
-const h = window.innerWidth * 0.8;
 
 
-// const backD = loadImage('./chopics/block.png');
 
-  window.setup = function() {
-    
-
-    let ske = window.createCanvas(window.innerWidth * 0.9, window.innerHeight * 0.8);
-    spine = new hold(w * 2, h * 2, weight, gravity); 
-    
-    ske.parent('#p5-container');
-
-    // console.log("setup");
-  }; 
   
   window.draw = function() {
     clear();
-
-  // console.log("here");
+    
     spine.update(mouseX, mouseY);
     spine.display(mouseX, mouseY);
-  
+    
+    
+    
   };
 
 
-
+  
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -69,10 +96,18 @@ document.addEventListener("DOMContentLoaded", () => {
   //   console.log(chopPoint);
   //   // requestAnimationFrame
   // });
+    
   
   
   
-  
+
+
+  // function draw() {
+  //   image(img, 0, 0);
+  //   image(img, 0, height/2)
+  // }
+
+    // console.log("setup");
   
   
   
