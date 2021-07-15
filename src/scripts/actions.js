@@ -10,16 +10,18 @@
 
 
 
-const Knife = function() {
+const Knife = function(ctx, point=null, handle=null) {
+  
+  if (!point) point = [(canWi * 0.8), (canHi * 0.2)];
+  if (!handle) handle = [(canWi * 0.8), (canHi * 0.6)];
+
+  let [pntx, pnty] = point;
+  let [hanx, hany] = handle;
   
   const wid = 15;
-  let pntx = canWi * 0.8;
-  let pnty = canHi * 0.2;
   
-  let hanx = canWi * 0.8;
-  let hany = canHi * 0.6;
   
-    const relativeTurn = function([x1, y1], length, angle) {
+    const _relativeTurn = function([x1, y1], length, angle) {
       angle *= Math.PI / 180;
     
       let x2 = x1 + length * Math.cos(angle);
@@ -28,17 +30,20 @@ const Knife = function() {
       // consider refactoring to return angle cos, sin for return path
     };
   
-  this.point = [pntx,pnty];
-  this.handle = [hanx, hany];
-  this.blade = [this.point, this.handle];
-  this.hilt = function() {
-    let inBot = relativeTurn(this.handle, wid, 90);
-    let inTop = relativeTurn(this.hilt[inBot], this.spine.length * 0.3, 90);
-    let outTop = relativeTurn(inTop, wid, 90);
-    let outBot = relativeTurn(outTop, this.spine.length * 0.3, 90);
-  };
-  // r will change, it is currently for rendering purposes only
-  // it represents half the width of the knife objec
+  
+
+
+    this.bladeLeng = Math.sqrt(Math.pow((hanx - pntx),2) + Math.pow((hany - pnty),2));
+    
+    let inBot = _relativeTurn([hanx, hany], wid, 0);
+    let inTop = _relativeTurn([inBot[0], inBot[1]], -this.bladeLeng * 0.6, 90);
+    let outTop = _relativeTurn(inTop, -2 * wid, 0);
+    let outBot = _relativeTurn(outTop, this.bladeLeng * 0.6, 90);
+    
+    this.hilt = [inBot, inTop, outTop, outBot];
+
+
+
   };
 
 

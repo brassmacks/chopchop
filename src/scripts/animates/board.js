@@ -42,21 +42,22 @@ export function renderFace(c) {
   c.lineTo(900,600);
   c.strokeStyle= "black";
   c.stroke();
-  c.fillStyle = "rgba(229,136,38)";
-  c.fillRect(100,600,650,133);
-  c.moveTo(100,600);
+  // board mock 
+  // c.fillStyle = "rgba(229,136,38)";
+  // c.fillRect(100,600,650,133);
+  // c.moveTo(100,600);
   // c.strokeStyle = "rgba(229,136,38)";
-  c.lineTo(300, 300);
-  c.lineTo(900, 300);
-  c.lineTo(750,600);
-  c.stroke();
+  // c.lineTo(300, 300);
+  // c.lineTo(900, 300);
+  // c.lineTo(750,600);
+  // c.stroke();
 
-  c.fill();
-  c.lineTo(750,733);
-  c.lineTo(900,433);
-  c.lineTo(900, 300);
-  c.stroke();
-  c.fill();
+  // c.fill();
+  // c.lineTo(750,733);
+  // c.lineTo(900,433);
+  // c.lineTo(900, 300);
+  // c.stroke();
+  // c.fill();
   // c.clearRect(160,160, 167.5, 105);
   //			x  y width height
   // c.beginPath();

@@ -9,7 +9,6 @@ html, body {
   height: 100%;
   margin: 0px;
   border: 0;
-  overflow: hidden;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -29,15 +28,21 @@ div.canvas {
   height: fit-content;
   block-size: fit-content;
   border-radius: 13px;
-  align-content: space-around;
+  flex-direction: column;
 }
 
 canvas#mycanvas {
+  background-image: url("../chopics/block.png");
   box-sizing: border-box;
-  width: 600px;
-  min-height: 500px;
-  max-height: 650px;
-  background-color: transparent;
+  width: 700px;
+  height: 600px;
+  min-height: fit-content;
+  min-width: fit-content;
+  background-repeat: no-repeat;
+}
+
+#a {
+  height: fit-content;
 }
 
 div.cradle {
