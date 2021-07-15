@@ -1,19 +1,52 @@
-// require
+import {p5} from 'p5';
 
-// size
-// style [one of constant class array] // get it working first
 
-// exists as a line on x y zed fixed on -z maxima, 
-    // pointFloat moves relative to mouse movement
+// compartmentalize into own file 
 
-// class knife constructor
-// this style
-// this handTether = fixed x y zed[] - all of which have maxima 
-    // handTether becomes un fixed on user input
-    // slide left and right  up down
 
-    // default is fixed relative to board / RHand
-//
+// compartmentalize into own file 
+export class hold {
+    constructor(xpos, ypos, m, g) {
+
+        console.log(xpos);
+        this.x = xpos;
+        this.y = ypos;
+        this.vx = 0;
+        this.vy = 0;
+        this.radius = 30;
+
+        this.weight = 2;
+        this.gravity = 10;
+        this.stiffness = 0.2;
+        this.resistence = 0.7;
+
+        this.update = function (gX, gY) {
+            console.log(gX, gY);
+            let frX = (gX - this.x) * this.stiffness;
+            let ax = frX / this.mass;
+
+            this.vx = this.resistence * (this.vx + ax);
+            this.x += this.vx;
+
+            let fY = (gY - this.y) * this.stiffness;
+            fY += this.gravity;
+
+            let ay = fY / this.mass;
+            this.vy = this.resistence * (this.vy + ay);
+            this.y += this.vy;
+
+        };
+
+        this.display = function (nx, ny) {
+            stroke('rgb(10,255,40)');
+            line(this.x, this.y, nx, ny);
+        };
+
+
+    }
+}
+
+
 
 //methods 
 
