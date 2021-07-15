@@ -25,22 +25,23 @@ div.canvas {
   padding: 6%;
 
   background-color: rosybrown;
-  width: fit-content;
-  height: fit-content;
+  width: auto;
+  height: auto;
   block-size: fit-content;
   border-radius: 13px;
   flex-direction: column;
 
 }
-canvas#mycanvas{
+#mycanvas{
+	
 	background-image: url("../chopics/block.png");
-  box-sizing: border-box;
-  width: 700px;
-	height: 600px;
+  
+  width: 900px;
+	height: 584px;
   min-height: fit-content;
 	min-width: fit-content;
 	background-repeat: no-repeat;
-  // max-height: 650px;
+  
   
 	
 }
@@ -57,8 +58,8 @@ div.cradle {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: content;
-	min-width: content;
+	// min-height: content;
+	// min-width: content;
 	height: inherit;
 }
 @media only screen and (max-width: 675px) {
@@ -78,13 +79,12 @@ div.cradle {
 }
 @media only screen and (max-width: 610px) {
 	canvas#mycanvas {
-		height: 100%;
-		width: auto;
+		viewport-fit: cover;
 		
 	}
 }
 
-@media (max-height: 571px){
+@media (max-height: 550px){
 	
 	div.cradle {
 		align-items: stretch;
@@ -94,11 +94,10 @@ div.cradle {
 		height: inherit
 	}
 	div.canvas {
-		height: 100%;
+		margin: 0;
+		padding: 0;
 	}
-	canvas#mycanvas{
-		height: auto;
-	}
+	
 
 
 }

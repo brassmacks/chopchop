@@ -1,7 +1,19 @@
-import {Board, renderFace} from "./animates/board";
+import {Board} from "./animates/board";
+
+
+
+
+
+
+
 
 export const Game = function (ctx) {
   this.board = new Board(ctx);
+
+
+
+
+
 
 };
 // export const Board = function () {

@@ -12,35 +12,35 @@
 // const POS = [x,y];
 export function renderFace(c) {
   
-  c.moveTo(100,0);
-  c.lineTo(100,700);
-  c.moveTo(200,0);
-  c.lineTo(200,700);
-  c.moveTo(300,0);
-  c.lineTo(300,700);
-  c.moveTo(400,0);
-  c.lineTo(400,700);
-  c.moveTo(500,0);
-  c.lineTo(500,700);
-  c.moveTo(600,0);
-  c.lineTo(600,700);
-  c.moveTo(700,0);
-  c.lineTo(700,700);
-  c.moveTo(800,0);
-  c.lineTo(800,700);
-  c.moveTo(0,100);
-  c.lineTo(900,100);
-  c.moveTo(0,200);
-  c.lineTo(900,200);
-  c.moveTo(0,300);
-  c.lineTo(900,300);
-  c.moveTo(0,400);
-  c.lineTo(900,400);
-  c.moveTo(0,500);
-  c.lineTo(900,500);
-  c.moveTo(0,600);
-  c.lineTo(900,600);
-  c.strokeStyle= "black";
+  // c.moveTo(100,0);
+  // c.lineTo(100,700);
+  // c.moveTo(200,0);
+  // c.lineTo(200,700);
+  // c.moveTo(300,0);
+  // c.lineTo(300,700);
+  // c.moveTo(400,0);
+  // c.lineTo(400,700);
+  // c.moveTo(500,0);
+  // c.lineTo(500,700);
+  // c.moveTo(600,0);
+  // c.lineTo(600,700);
+  // c.moveTo(700,0);
+  // c.lineTo(700,700);
+  // c.moveTo(800,0);
+  // c.lineTo(800,700);
+  // c.moveTo(0,100);
+  // c.lineTo(900,100);
+  // c.moveTo(0,200);
+  // c.lineTo(900,200);
+  // c.moveTo(0,300);
+  // c.lineTo(900,300);
+  // c.moveTo(0,400);
+  // c.lineTo(900,400);
+  // c.moveTo(0,500);
+  // c.lineTo(900,500);
+  // c.moveTo(0,600);
+  // c.lineTo(900,600);
+  // c.strokeStyle= "black";
   c.stroke();
   // board mock 
   // c.fillStyle = "rgba(229,136,38)";
@@ -80,7 +80,7 @@ export function Board(c) {
     
     this.clean = true;
     this.c = c;
-    this.face = renderFace(c); 
+    // this.face = renderFace(c); 
   
   
 }
