@@ -20,10 +20,16 @@ div.border {
 }
 
 div.canvas {
+  background-image: url("../chopics/block.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   /*  margin:auto;*/
   padding: 6%;
-  background-color: rosybrown;
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: #fde5d7;
   width: auto;
   height: auto;
   block-size: fit-content;
@@ -31,9 +37,8 @@ div.canvas {
   flex-direction: column;
 }
 
-#mycanvas {
-  background-image: url("../chopics/block.png");
-  width: 900px;
+#p5canvas {
+  width: 800px;
   height: 584px;
   min-height: fit-content;
   min-width: fit-content;

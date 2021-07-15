@@ -8,22 +8,24 @@ import {p5} from 'p5';
 export class hold {
     constructor(xpos, ypos, m, g) {
 
-        console.log(xpos);
+        // console.log(xpos);
         this.x = xpos;
         this.y = ypos;
         this.vx = 0;
         this.vy = 0;
         this.radius = 30;
 
-        this.weight = 2;
+        this.weight = m;
         this.gravity = 10;
         this.stiffness = 0.2;
         this.resistence = 0.7;
 
         this.update = function (gX, gY) {
-            console.log(gX, gY);
+            // console.log(gX, gY);
+            
+            // debugger
             let frX = (gX - this.x) * this.stiffness;
-            let ax = frX / this.mass;
+            let ax = frX / this.weight;
 
             this.vx = this.resistence * (this.vx + ax);
             this.x += this.vx;
@@ -31,13 +33,15 @@ export class hold {
             let fY = (gY - this.y) * this.stiffness;
             fY += this.gravity;
 
-            let ay = fY / this.mass;
+            let ay = fY / this.weight;
             this.vy = this.resistence * (this.vy + ay);
             this.y += this.vy;
 
         };
 
         this.display = function (nx, ny) {
+            noStroke();
+            // rect(this.x,this.y, nx*2, ny * 2);
             stroke('rgb(10,255,40)');
             line(this.x, this.y, nx, ny);
         };
