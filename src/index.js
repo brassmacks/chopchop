@@ -1,4 +1,4 @@
-import { resolve } from "core-js/fn/promise";
+
 import { Game } from "./scripts/game";
 // if exporting multi objects from same file // importing
 
