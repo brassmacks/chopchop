@@ -11,14 +11,31 @@ const backD = loadImage('./chopics/block.png');
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  
+
   let spine;
   let gravity = 10;
   let weight = 2;
 
-  const grip = new hold(0.0, width / 2, weight, gravity);
+  const clickMap = document.querySelector("div.canvas");
+  const can = document.querySelector("canvas#mycanvas"); 
+  const ctx = can.getContext('2d');
+  
+  can.addEventListener("mouseenter", function (e) {
+    const grip = new hold(e.x, e.y, weight, gravity);
+    
+    console.log(grip);
+    let kx = e.x;
+
+    let ky = e.y;
+    // console.log("here");
+    // repeat ^ on click
+    // console.log(kx,ky);
+    // knife([e.x,e.y]);
+    // ctx.fillRect()
 
 
+    
+  });
   // get this to work 
     // function sizeSet (x,y){
     //   ctx.canvas.width = x * 0.9;
@@ -27,9 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
     
 
-  const clickMap = document.querySelector("div.canvas");
-  const canEl = document.querySelector("canvas#mycanvas"); 
-  const ctx = canEl.getContext('2d');
     
     // let firstGame = new Game(ctx);
     
@@ -45,14 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // compartmentalize into own file 
   function hold(xpos, ypos, m, g) {
-  
+    console.log(xpos);
     this.x = xpos; 
     this.y = ypos;
     this.vx = 0;
     this.vy = 0;
     this.radius = 30;
 
-    this.weight = w;
+    this.weight = weight;
     this.gravity = g;
     this.stiffness = 0.2;
     this.resistence = 0.7;
@@ -89,11 +103,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // firstGame.print();
+
     // console.log(ctx);
-    // const chopPoint = {
-    //   x: null,
-    //   y: null
-    // };
+    const chopPoint = {
+      x: null,
+      y: null
+    };
 
 
 
