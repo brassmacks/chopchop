@@ -1,0 +1,31 @@
+boxRace = function() {
+  
+  rect
+}
+
+
+
+react demo
+
+
+npm - y
+
+
+  adding dependencies 
+    npm install webpack
+    npm install -D webpack-cli
+          - not in production
+
+    inside package . json
+
+      'scripts': {
+        'start': "webpack --watch --mode-developement"
+      }
+
+
+      webpack.cofig.json
+        module.exports = {
+          entry: './frontend/entry.js'
+        }
+
+        

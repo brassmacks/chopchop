@@ -1,8 +1,14 @@
 // import {Game} from "./scripts/game";
+
+
+import { boxrace } from './scripts/animates/boxRace';
 import * as p5 from 'p5';
+
 let chopper;
+
 import {hold} from './scripts/animates/knife';
-import audioOn from '../chopics/audioOn.png';
+
+
 let img;
 let gripped = false;
 
@@ -57,12 +63,7 @@ const chopPoint = {
 //   setup();
 // });
 
-window.addEventListener('mousedown', (e)=> {
-  let clix = e.x;
-  let cly = e.y;
-  gravity -= 100;
-  console.log(clix,cly);
-});
+
 
 window.addEventListener('mouseup', (e)=>{
   chopPoint.x = e.x;
@@ -70,16 +71,25 @@ window.addEventListener('mouseup', (e)=>{
   gravity += 100;
 });
 
+  let clickCount = 0;
 
+window.addEventListener('mousedown', (e) => {
+
+  let clix = e.x;
+  let cly = e.y;
+  gravity -= 100;
+  console.log(clix, cly);
+
+});
 
 
   
   window.draw = function() {
     clear();
-    
+    boxrace();
     spine.update(mouseX, mouseY);
     spine.display(mouseX, mouseY);
-    
+
     
     
   };
@@ -138,10 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
             
             
             
-            // can.addEventListener("mouseenter", function (e) {
-              //   const grip = new hold(e.x, e.y, weight, gravity);
+            // can.addEventListener("mousedown", function (e) {
+            //     const grip = new hold(e.x, e.y, weight, gravity);
               
-              //   console.log(grip);
+            //   //   console.log(grip);
               // });
               
           
